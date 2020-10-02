@@ -1,12 +1,10 @@
+const arrayIsNotEmpty = (array) => array !== undefined && array.length !== 0;
 
-exports.min = function min (array) {
-  return 0;
-}
+exports.min = (array) =>
+  arrayIsNotEmpty(array) ? Math.min.apply(null, array) : 0;
 
-exports.max = function max (array) {
-  return 0;
-}
+exports.max = (array) =>
+  arrayIsNotEmpty(array) ? Math.max.apply(null, array) : 0;
 
-exports.avg = function avg (array) {
-  return 0;
-}
+exports.avg = (array) =>
+  arrayIsNotEmpty(array) ? array.reduce((a, b) => (a + b)) / array.length : 0;
